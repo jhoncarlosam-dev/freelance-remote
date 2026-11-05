@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Notas para conseguir los primeros clientes</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#100f0d">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="page-kit">
+  <div class="progreso" aria-hidden="true"><span id="progreso"></span></div>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <header class="site-header">
+    <a class="wordmark" href="index.html"><span data-nombre data-fallback="Edición">Edición</span><span class="where" data-ciudad>Bogotá</span></a>
+    <nav class="nav" aria-label="Secciones">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menú</button>
+      <div id="site-nav" class="nav-links">
+        <a href="index.html">Portafolio</a>
+        <a href="#mensaje-listo">Mensaje</a>
+        <a href="#plataformas">Plataformas</a>
+        <a href="#contactos">Contactos</a>
+      </div>
+    </nav>
+  </header>
+  <div class="banner">Esta página es tuya. A tus contactos envíales el inicio del portafolio, no estas notas.</div>
+
+  <main id="contenido" class="wrap band">
+    <p class="kicker">Kit de salida</p>
+    <h1>Cómo conseguir los primeros clientes</h1>
+    <p class="lede">Estas notas salen del video <a href="https://www.youtube.com/watch?v=Go3ry-5xBZc">Cómo conseguir clientes siendo freelancer en 2026</a>, de Flor Enrulada, aplicadas a edición de redes con CapCut y Canva. El oficio ya está definido en el portafolio: video corto para creadores, negocios locales y marcas personales.</p>
+
+    <section class="panel" aria-labelledby="caminos">
+      <h2 id="caminos">Cinco caminos, y seguir</h2>
+      <ol class="rules">
+        <li>Plataformas. Arma perfil en Workana y en al menos una más: Fiverr, Freelancer o Upwork. Pega el texto de abajo y el enlace del portafolio. Una o dos reseñas, solo de personas a las que sí ayudaste, evitan que el perfil se vea vacío.</li>
+        <li>Búsqueda directa. Escríbele a alguien cuyo contenido te guste de verdad. El mensaje va abajo.</li>
+        <li>Mostrar cómo trabajas. Publica un consejo corto de edición. Quien crea contenido quiere saber que del otro lado hay una persona que entiende su material.</li>
+        <li>Referidos. Llegan después del primer trabajo bien cerrado: a tiempo, con buena comunicación y el archivo en orden. Ahí pides que te presenten a alguien.</li>
+        <li>Grupos. Entra a uno de editores o emprendedores en WhatsApp, Telegram o Discord. Comenta con un ejemplo de corte. Cuando a un colega se le llena la agenda, recomienda a otro.</li>
+      </ol>
+      <p class="note" style="margin-top:0.9rem">Un mensaje sin respuesta deja el contacto guardado muchas veces. El siguiente puede ser el que contesta. Flor lo resume en una palabra: perseverancia.</p>
+    </section>
+
+    <section class="panel" id="mensaje-listo" aria-labelledby="mensaje-titulo">
+      <h2 id="mensaje-titulo">Mensaje para un contacto</h2>
+      <ul class="rules">
+        <li>Habla de lo que sí te gustó y de una mejora concreta.</li>
+        <li>Descalificar su video cierra la conversación.</li>
+        <li>Ofrece el portafolio. Lo peor que pasa es un silencio, un no, o que guarden tu contacto.</li>
+      </ul>
+      <form id="generador" style="margin-top:1rem">
+        <div class="form-grid">
+          <label>Tu nombre
+            <input name="nombre" maxlength="80" autocomplete="name">
+          </label>
+          <label>Nombre de la persona
+            <input name="persona" maxlength="80" autocomplete="off">
+          </label>
+          <label class="full">Dónde lo viste
+            <input name="donde" maxlength="80" placeholder="canal de YouTube, tienda de Instagram, perfil de TikTok">
+          </label>
+          <label class="full">Qué te gustó, en concreto
+            <textarea name="gusto" maxlength="320" placeholder="Me quedé con la forma en que explicas el producto en el primer minuto."></textarea>
+          </label>
+          <fieldset class="full" style="border:0;padding:0;margin:0">
+            <legend style="font-weight:600;margin-bottom:.4rem">Con qué puedes ayudar</legend>
+            <label class="check"><input type="checkbox" name="oferta" value="el gancho del primer segundo" checked> El gancho del primer segundo</label>
+            <label class="check"><input type="checkbox" name="oferta" value="los subtítulos para verlo sin audio"> Los subtítulos para verlo sin audio</label>
+            <label class="check"><input type="checkbox" name="oferta" value="el ritmo, quitando pausas"> El ritmo, quitando pausas</label>
+            <label class="check"><input type="checkbox" name="oferta" value="una portada o miniatura en Canva"> Una portada o miniatura en Canva</label>
+          </fieldset>
+          <label class="full">Enlace del portafolio
+            <input name="enlace" type="url" inputmode="url" placeholder="https://">
+          </label>
+        </div>
+        <p class="inline-note" id="aviso-enlace" hidden>Pega el enlace público antes de enviar. Esta vista todavía no tiene uno listo para compartir.</p>
+        <p id="mensaje" class="message-out" style="margin-top:1rem" tabindex="0"></p>
+        <div class="actions">
+          <button class="btn btn-lime" type="button" id="copiar-mensaje">Copiar mensaje</button>
+          <span id="mensaje-cuenta" class="note"></span>
+        </div>
+        <p id="mensaje-estado" role="status"></p>
+      </form>
+    </section>
+
+    <section class="panel" id="plataformas" aria-labelledby="plataformas-titulo">
+      <h2 id="plataformas-titulo">Texto para el perfil</h2>
+      <p class="note">Úsalo en Workana, Fiverr, Freelancer o Upwork. El título puede ser: editor de videos cortos para redes.</p>
+      <div class="copy-block" id="bio-perfil">Edito Reels, TikTok y YouTube Shorts en CapCut, y preparo portadas y miniaturas en Canva. Trabajo con creadores y negocios que ya grabaron el material y necesitan el video listo para publicar: gancho en el primer segundo, ritmo sin pausas de más y texto que se lee sin audio.
+
+Estoy tomando los primeros encargos. En el portafolio hay muestras de estilo marcadas como ejemplos, con el proceso y el alcance de cada paquete.
+
+Para cotizar necesito la duración aproximada, la fecha de publicación, una referencia y el enlace del material.</div>
+      <div class="actions">
+        <button class="btn btn-ghost" type="button" data-copy="#bio-perfil">Copiar texto</button>
+      </div>
+      <h3 style="margin-top:1.4rem">Título de un servicio en Fiverr</h3>
+      <div class="copy-block" id="bio-fiverr">Editaré tu Reel, TikTok o Short en CapCut, con subtítulos y portada en Canva.</div>
+      <div class="actions">
+        <button class="btn btn-ghost" type="button" data-copy="#bio-fiverr">Copiar texto</button>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="precio-titulo">
+      <h2 id="precio-titulo">Por qué esos precios</h2>
+      <p>En Colombia, durante 2026, un reel básico se mueve cerca de $80.000 a $150.000 por pieza. Un paquete de cuatro videos en una productora puede pasar de $700.000. La tarifa del portafolio queda en la entrada de ese rango: $90.000 la pieza suelta y $80.000 cada video dentro del mes.</p>
+      <p class="note" style="margin-top:.7rem">Al empezar se compite con el precio, y también con un alcance escrito. Bajar mucho más hace que la otra persona desconfíe. Cuando tengas reseñas y piezas con clientes, el precio sube con el alcance, no de un día para otro y en silencio.</p>
+    </section>
+
+    <section class="panel" aria-labelledby="resenas-titulo">
+      <h2 id="resenas-titulo">Reseña, referido y tres publicaciones</h2>
+      <h3>Pedir una reseña</h3>
+      <p class="note">Solo a alguien que recibió un trabajo real: un familiar con negocio al que le editaste un mes, un amigo al que le cortaste un video. Una reseña de quien no trabajó contigo se nota.</p>
+      <div class="copy-block" id="texto-resena">Hola. El video que te edité ya está publicado. Si te sirvió el plazo y la comunicación, ¿me dejas una reseña corta en la plataforma? Estoy arrancando y con eso el perfil deja de verse vacío. Si prefieres no hacerlo, no hay problema.</div>
+      <div class="actions"><button class="btn btn-ghost" type="button" data-copy="#texto-resena">Copiar texto</button></div>
+
+      <h3 style="margin-top:1.3rem">Pedir un referido</h3>
+      <div class="copy-block" id="texto-referido">Me alegra que el video te haya servido. Si conoces a alguien que esté grabando y necesite el corte, te agradezco que le pases el portafolio. Yo le escribo con el mismo cuidado.</div>
+      <div class="actions"><button class="btn btn-ghost" type="button" data-copy="#texto-referido">Copiar texto</button></div>
+
+      <h3 style="margin-top:1.3rem">Tres piezas para publicar tú</h3>
+      <div class="copy-block" id="texto-posts">1. Antes y después de ocho segundos. Muestra la toma larga y el corte en cuatro frases. Escribe: el mismo aviso, menos pausa, texto grande.
+
+2. Subtítulo para verlo en silencio. Dos líneas como máximo. Las palabras que se dicen, en grande, no un párrafo.
+
+3. Lo que pido antes de editar. El material, la fecha, una referencia y la frase del video. Así la otra persona ve cómo trabajas antes de contratarte.</div>
+      <div class="actions"><button class="btn btn-ghost" type="button" data-copy="#texto-posts">Copiar texto</button></div>
+    </section>
+
+    <section class="panel" id="contactos" aria-labelledby="contactos-titulo">
+      <h2 id="contactos-titulo">Cuando me pases tu lista</h2>
+      <p>Escríbela así, una persona por bloque. Con eso preparo un mensaje distinto para cada una, con lo que te gusta de su contenido y el enlace del portafolio. La lista se queda fuera del sitio público.</p>
+      <ul class="rules">
+        <li>Nombre</li>
+        <li>Canal: Instagram, WhatsApp, correo o YouTube</li>
+        <li>Usuario o número</li>
+        <li>A qué se dedica</li>
+        <li>Qué te gusta de lo que publica, en una frase concreta</li>
+        <li>Enlace</li>
+      </ul>
+      <p class="note" style="margin-top:.8rem">También puedo dejar tu nombre, WhatsApp, correo e Instagram en el botón del portafolio. Pásamelos junto con la lista. El formato está en <code>privado/contactos.ejemplo.json</code>.</p>
+    </section>
+  </main>
+
+  <script src="js/perfil.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/kit.js"></script>
+</body>
+</html>
